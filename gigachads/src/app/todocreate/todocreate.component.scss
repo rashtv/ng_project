@@ -1,0 +1,20 @@
+.create{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  border: 1px solid black;
+  border-radius: 20px 40px;
+  width: max-content;
+  padding: 20px;
+
+  &__inp{
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+  }
+
+  &__btn{
+    border: 1px solid black;
+    border-radius: 40px;
+  }
+}

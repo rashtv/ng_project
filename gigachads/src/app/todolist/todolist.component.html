@@ -1,0 +1,12 @@
+<div class="page">
+  <div class="header">
+    <h1 class="header__title">My ToDo list</h1>
+    <app-todocreate class="header__setItem" [addToDo] = 'addToDo'></app-todocreate>
+  </div>
+
+  <div class="content">
+    <div class="content__item" *ngFor="let item of toDoList">
+      <app-todoitem [removeItem]="removeToDo" [todoItem]="item"></app-todoitem>
+    </div>
+  </div>
+</div>

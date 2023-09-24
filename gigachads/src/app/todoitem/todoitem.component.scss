@@ -1,0 +1,26 @@
+.todoItem{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-radius: 40px 20px 0 20px;
+  width: 400px;
+  margin: 20px;
+  &__title{
+    font-size: large;
+    text-align: center;
+  }
+  &__desc{
+    font-size: medium;
+    position: relative;
+    margin: 10px 30px;
+  }
+  &__btn{
+    border: 1px solid black;
+    border-radius: 40px;
+    align-self: self-end;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: rebeccapurple;
+    color: whitesmoke;
+  }
+}
