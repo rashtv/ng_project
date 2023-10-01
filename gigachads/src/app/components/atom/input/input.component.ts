@@ -1,10 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-input',
   templateUrl: './input.component.html',
   styleUrls: ['./input.component.css']
 })
-export class InputComponent {
 
+export class InputComponent {
+  @Input() input_placeholder: string = "";
+  @Output() dataEvent = new EventEmitter<string>();
+
+  text: string = "";
+  handle() {
+    this.dataEvent.emit(this.text);
+  }
 }
+
+
+

@@ -1,0 +1,14 @@
+.header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.header__right-btn {
+  width: 144px;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  gap: 4px;
+}
