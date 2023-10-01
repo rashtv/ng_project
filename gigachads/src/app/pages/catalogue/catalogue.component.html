@@ -1,1 +1,11 @@
-<p>catalogue works!</p>
+<div class="catal">
+  <app-header [search]="search" (dataEvent)="receiveDataFromChild($event)"></app-header>
+
+  <div class="content">
+    <div class="content__card" *ngFor="let card of cards">
+      {{ card['strDrink'] }}
+    </div>
+  </div>
+
+  <app-footer></app-footer>
+</div>
