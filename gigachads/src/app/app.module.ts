@@ -7,6 +7,11 @@ import { TodolistComponent } from './todolist/todolist.component';
 import { TodoitemComponent } from './todoitem/todoitem.component';
 import { TodocreateComponent } from './todocreate/todocreate.component';
 import { FormsModule } from '@angular/forms';
+import { BtnComponent } from './components/atom/btn/btn.component';
+import { InputComponent } from './components/atom/input/input.component';
+import { SearchComponent } from './components/molecule/search/search.component';
+import { HeaderComponent } from './components/organism/header/header.component';
+import { FooterComponent } from './components/organism/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +19,11 @@ import { FormsModule } from '@angular/forms';
     TodolistComponent,
     TodoitemComponent,
     TodocreateComponent,
+    BtnComponent,
+    InputComponent,
+    SearchComponent,
+    HeaderComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
