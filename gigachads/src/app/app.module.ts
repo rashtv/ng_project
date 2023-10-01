@@ -12,6 +12,9 @@ import { InputComponent } from './components/atom/input/input.component';
 import { SearchComponent } from './components/molecule/search/search.component';
 import { HeaderComponent } from './components/organism/header/header.component';
 import { FooterComponent } from './components/organism/footer/footer.component';
+import { MainComponent } from './pages/main/main.component';
+import { AboutComponent } from './pages/about/about.component';
+import { CatalogueComponent } from './pages/catalogue/catalogue.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,9 @@ import { FooterComponent } from './components/organism/footer/footer.component';
     SearchComponent,
     HeaderComponent,
     FooterComponent,
+    MainComponent,
+    AboutComponent,
+    CatalogueComponent,
   ],
   imports: [
     BrowserModule,
