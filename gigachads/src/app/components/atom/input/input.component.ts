@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-input',
@@ -10,10 +10,12 @@ export class InputComponent {
   @Input() input_placeholder: string = "";
   @Output() dataEvent = new EventEmitter<string>();
 
+  
   text: string = "";
   handle() {
     this.dataEvent.emit(this.text);
   }
+
 }
 
 

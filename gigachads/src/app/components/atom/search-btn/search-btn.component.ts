@@ -6,10 +6,4 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./search-btn.component.css']
 })
 export class SearchBtnComponent {
-  @Input() search: () => void = () => {};
-
-  searchFunc() {
-    this.search();
-    console.log(this.search())
-  }
 }

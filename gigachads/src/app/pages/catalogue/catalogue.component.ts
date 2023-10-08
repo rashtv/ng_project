@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ApiService } from 'src/app/services/api-service/api.service';
+import { Drink } from 'src/app/models/drink/drink';
 
 @Component({
   selector: 'app-catalogue',
@@ -9,32 +10,21 @@ import { ApiService } from 'src/app/services/api-service/api.service';
 export class CatalogueComponent {
   constructor(private apiService: ApiService) {}
 
-  receivedData: string = "";
-
-  receiveDataFromChild(data: string) {
-    this.receivedData = data;
-    console.log('cat');
-  }
-
+  cards: Drink[] = [];
   ngOnInit() {
-    this.search();
+    // this.fetchCurData();
+    this.dataObs()
   }
 
-  cards = [];
-
-  search = () => {
-    this.fetchData();
+  dataObs() {
+    this.apiService.sharedData.subscribe((array) => {
+      this.cards = array;
+    });
   }
 
-  fetchData() {
-    this.apiService.get_by_name(this.receivedData).subscribe(
-      (response) => {
-        this.cards = response.drinks;
-        console.log(this.cards);
-      },
-      (error) => {
-        console.error(error);
-      }
-    );
-  }
+  // fetchCurData() {
+  //   setTimeout(() => {
+  //     this.cards = this.apiService.getCurrentData();
+  //   }, 300);
+  // }
 }
