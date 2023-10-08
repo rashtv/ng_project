@@ -17,6 +17,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { CatalogueComponent } from './pages/catalogue/catalogue.component';
 import { SearchBtnComponent } from './components/atom/search-btn/search-btn.component';
 import { AlcoCardComponent } from './components/molecule/alco-card/alco-card.component';
+import { PageNotFoundComponent } from './pages/notFound/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { AlcoCardComponent } from './components/molecule/alco-card/alco-card.com
     CatalogueComponent,
     SearchBtnComponent,
     AlcoCardComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,

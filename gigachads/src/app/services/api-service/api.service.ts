@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import axios from 'axios';
-import { Observable } from 'rxjs';
+import { Observable, BehaviorSubject } from 'rxjs';
+import { Drink } from 'src/app/models/drink/drink';
+
 
 @Injectable({
   providedIn: 'root',
@@ -21,7 +23,31 @@ export class ApiService {
     allIngredients: 'list.php?i=list',
     allAlcoholic: 'list.php?a=list',
   };
+
+  private currentData = new BehaviorSubject<Drink[]>([]);
+  sharedData = this.currentData.asObservable();
   constructor() {}
+
+  
+  
+  getCurrentData() {
+    return this.sharedData;
+  }
+
+  fetchData(url: string): Observable<any> {
+    return new Observable((observer) => {
+      axios
+        .get(this.BaseUrl + url)
+        .then((response) => {
+          this.currentData.next(response.data.drinks);
+        })
+        .catch((error) => {
+          observer.error(error);
+        });
+    });
+  }
+
+
 
   get_by_name(url: string) {
     return this.fetchData(this.APIs.name + url);
@@ -55,19 +81,5 @@ export class ApiService {
   }
   get_alltypes_Alcoholic() {
     return this.fetchData(this.APIs.allAlcoholic);
-  }
-
-  fetchData(url: string): Observable<any> {
-    return new Observable((observer) => {
-      axios
-        .get(this.BaseUrl + url)
-        .then((response) => {
-          observer.next(response.data);
-          observer.complete();
-        })
-        .catch((error) => {
-          observer.error(error);
-        });
-    });
   }
 }
