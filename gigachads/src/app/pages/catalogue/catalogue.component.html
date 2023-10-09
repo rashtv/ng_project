@@ -2,7 +2,7 @@
 
   <div class="content">
     <div class="content__card" *ngFor="let card of cards">
-      {{ card['strDrink'] }}
+      <app-alco-card [drink]=card></app-alco-card>
     </div>
   </div>
 
