@@ -9,8 +9,9 @@ import { Drink } from 'src/app/models/drink/drink';
 export class AlcoCardComponent {
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  @Input() drink: Drink | any = null;
 
-  // @Input drink: Drink | null = null;
+  cl() {
+    console.log(this.drink);
+  }
 }
