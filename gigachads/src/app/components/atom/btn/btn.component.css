@@ -2,12 +2,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid black;
-  border-radius: 8px;
-  width: 70px;
-  height: 36px;
-  background-color: rgb(255, 255, 255);
-  color: rgb(215, 172, 255);
+
+  border: none;
+  
+  width: 100px;
+  height: 80px;
+  background: none;
+  
+  font-family: fantasy;
+  font-size: 16px;
   font-weight: 600;
 }
 

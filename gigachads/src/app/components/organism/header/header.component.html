@@ -1,14 +1,47 @@
 <div class="header">
-  <div class="header__left-logo"></div>
+  <div class="header__left-logo">
+    <img class="header-logo" src="../../../../assets/img/logo.png">
+  </div>
 
-  <app-search></app-search>
+  <div class="header__left-btn">
+    <app-btn class="header-btn">
+      <span btn class="header-btn">Catalogue</span>
+    </app-btn>
+  </div>
+  
+  <div class="header__left-btn">
+    <app-btn class="header-btn">
+      <span btn class="header-btn">Abouts us</span>
+    </app-btn>
+  </div>
 
+  <div class="header__left-btn-2">
+    <app-btn class="header-btn">
+      <span btn class="header-btn">Contact us</span>
+    </app-btn>
+  </div>
+  
+  <div class="search-bar-container">
+    <app-search></app-search>
+  </div>
+  
   <div class="header__right-btn" *ngIf="authorized">
-    <app-btn><span btn>Profile</span></app-btn>
-    <app-btn (click)="auth()"><span btn>Logout</span></app-btn>
+    <app-btn>
+      <span btn>Profile</span>
+    </app-btn>
   </div>
+  
+  <div class="header__right-btn-2" *ngIf="authorized">
+    <app-btn (click)="auth()">
+      <span btn>Logout</span>
+    </app-btn>
+  </div>
+  
   <div class="header__right-btn" *ngIf="!authorized">
-    <app-btn (click)="auth()"><span btn>Login</span></app-btn>
+    <app-btn (click)="auth()">
+      <span btn>Login</span>
+    </app-btn>
   </div>
+
 </div>
   
