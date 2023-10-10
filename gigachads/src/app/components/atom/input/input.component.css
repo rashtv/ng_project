@@ -1,8 +1,13 @@
 .input {
   min-width: 500px;
-  height: 38px;
   border: 1px solid black;
-  border-radius: 24px 0 0 24px;
-  padding: 0 10px;
-  transition: all .4s;
+  border-radius: 4px 0 0 4px;
+  padding: 10px;
+  
+  font-size: 16px;
+}
+
+.input:focus {
+  outline: none;
+
 }

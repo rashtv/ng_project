@@ -1,6 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 body {
+  font-family: fantasy;
+  
   padding: 0;
   margin: 0;
-  background-color: rgb(39, 99, 163);
+  
+  background-image: url(assets/img/wineglass-with-rose-smoky-liquor.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
