@@ -1,0 +1,28 @@
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid gray;
+}
+
+.card__left-img {
+    width: 120px;
+}
+
+.card__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+}
+
+.card-btn{
+    color: white;
+}
+
+.card__atom-btn {
+    background-color: aqua;
+}

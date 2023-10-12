@@ -3,20 +3,20 @@
     <img class="header-logo" routerLink="/main" src="../../../../assets/img/logo.png">
   </div>
 
-  <div class="header__left-btn">
-    <app-btn routerLink="/catalogue">
+  <div class="header__left-btn" routerLink="/catalogue">
+    <app-btn class="header-btn" >
       <span btn class="header-btn">Catalogue</span>
     </app-btn>
   </div>
   
-  <div class="header__left-btn">
-    <app-btn routerLink="/about">
+  <div class="header__left-btn" routerLink="/about">
+    <app-btn class="header-btn">
       <span btn class="header-btn">Abouts us</span>
     </app-btn>
   </div>
 
-  <div class="header__left-btn header__left-end">
-    <app-btn routerLink="/main">
+  <div class="header__left-btn header__left-end" routerLink="/main">
+    <app-btn class="header-btn">
       <span btn class="header-btn">Contact us</span>
     </app-btn>
   </div>
@@ -26,22 +26,21 @@
   </div>
 
   <div class="header__right-btn" *ngIf="authorized">
-    <div class="header__right-btn">
-      <app-btn>
+    <div class="header__right-btn max-btn">
+      <app-btn class="header-btn">
         <span btn class="header-btn">Profile</span>
       </app-btn>
     </div>
     
-    <div class="header__right-btn">
-      <app-btn (click)="auth()">
+    <div class="header__right-btn max-btn">
+      <app-btn class="header-btn" (click)="auth()">
         <span btn class="header-btn">Logout</span>
       </app-btn>
     </div>
   </div>
   
-  
   <div class="header__right-btn" *ngIf="!authorized">
-    <app-btn (click)="auth()">
+    <app-btn class="header-btn" (click)="auth()">
       <span btn class="header-btn">Login</span>
     </app-btn>
   </div>

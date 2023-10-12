@@ -1,4 +1,20 @@
-<div>
-    {{drink.strDrink}}
-    <button (click)="cl()"></button>
+<div class="card">
+    <div class="card__left">
+        <img class="card__left-img" [src]="drink.strDrinkThumb" alt="">
+    </div>
+    <div class="card__info">
+        <div class="card__info-item">
+            {{drink.strDrink}}
+        </div>
+        <div class="card__info-item">
+            {{drink.strCategory}}
+        </div>
+        <div class="card__info-item">
+            {{drink.strAlcoholic}}
+        </div>
+        <div class="card__info-item">
+            {{drink.strGlass}}
+        </div>
+    </div>
+    <app-btn class="card__atom-btn" (click)="buyDrink()"><span btn class="card-btn">Buy</span></app-btn>
 </div>
