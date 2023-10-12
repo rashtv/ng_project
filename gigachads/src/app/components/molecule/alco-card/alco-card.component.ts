@@ -11,7 +11,7 @@ export class AlcoCardComponent {
 
   @Input() drink: Drink | any = null;
 
-  cl() {
+  buyDrink() {
     console.log(this.drink);
   }
 }
