@@ -1,22 +1,22 @@
 <div class="header">
   <div class="header__left-logo">
-    <img class="header-logo" src="../../../../assets/img/logo.png">
+    <img class="header-logo" routerLink="/main" src="../../../../assets/img/logo.png">
   </div>
 
   <div class="header__left-btn">
-    <app-btn class="header-btn">
+    <app-btn routerLink="/catalogue">
       <span btn class="header-btn">Catalogue</span>
     </app-btn>
   </div>
   
   <div class="header__left-btn">
-    <app-btn class="header-btn">
+    <app-btn routerLink="/about">
       <span btn class="header-btn">Abouts us</span>
     </app-btn>
   </div>
 
-  <div class="header__left-btn-2">
-    <app-btn class="header-btn">
+  <div class="header__left-btn header__left-end">
+    <app-btn routerLink="/main">
       <span btn class="header-btn">Contact us</span>
     </app-btn>
   </div>
@@ -24,22 +24,25 @@
   <div class="search-bar-container">
     <app-search></app-search>
   </div>
-  
+
   <div class="header__right-btn" *ngIf="authorized">
-    <app-btn>
-      <span btn>Profile</span>
-    </app-btn>
+    <div class="header__right-btn">
+      <app-btn>
+        <span btn class="header-btn">Profile</span>
+      </app-btn>
+    </div>
+    
+    <div class="header__right-btn">
+      <app-btn (click)="auth()">
+        <span btn class="header-btn">Logout</span>
+      </app-btn>
+    </div>
   </div>
   
-  <div class="header__right-btn-2" *ngIf="authorized">
-    <app-btn (click)="auth()">
-      <span btn>Logout</span>
-    </app-btn>
-  </div>
   
   <div class="header__right-btn" *ngIf="!authorized">
     <app-btn (click)="auth()">
-      <span btn>Login</span>
+      <span btn class="header-btn">Login</span>
     </app-btn>
   </div>
 
