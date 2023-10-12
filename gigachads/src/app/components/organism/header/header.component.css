@@ -1,15 +1,18 @@
-.header{
+.header {
   display: flex;
   flex-direction: row;
-  background: linear-gradient(to right, rgba(65, 1, 121, 1), rgba(65, 1, 121, 0.696)) ;
+  background: linear-gradient(
+    to right,
+    rgba(65, 1, 121, 1),
+    rgba(65, 1, 121, 0.696)
+  );
 }
 
-.header__left-logo {
-  display: flex;
+.header-btn {
+  color: azure;
 }
 
 .header-logo {
-  background: linear-gradient(to right, rgba(65, 1, 121, 1), rgba(65, 1, 121, 0.696)) ;
   height: 80px;
   cursor: pointer;
 }
@@ -23,11 +26,8 @@
 
 .header__left-btn {
   width: 100px;
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
   border-left: 2px black solid;
-  
+
   :hover {
     background-color: rgba(150, 10, 92, 0.6);
     transition: 0.4s;
@@ -35,41 +35,16 @@
   }
 }
 
-.header__left-btn-2 {
-  width: 100px;
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-  border-left: 2px black solid;
+.header__left-end {
   border-right: 2px black solid;
-  
-  :hover {
-    background-color: rgba(150, 10, 92, 0.6);
-    transition: 0.4s;
-    cursor: pointer;
-  }
 }
 
 .header__right-btn {
   width: 100px;
   display: flex;
   flex-direction: row;
-  justify-content: right;
+  justify-content: flex-end;
   margin-left: auto;
-  border-left: 2px black solid;
-
-  :hover {
-    background-color: rgba(150, 10, 92, 0.6);
-    transition: 0.4s;
-    cursor: pointer;
-  }
-}
-
-.header__right-btn-2 {
-  width: 100px;
-  display: flex;
-  flex-direction: row;
-  justify-content: right;
   border-left: 2px black solid;
 
   :hover {
