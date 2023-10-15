@@ -8,3 +8,6 @@ export class ApiService {
   constructor() { }
 
 }
+
+export class ApiServiceService {
+}
