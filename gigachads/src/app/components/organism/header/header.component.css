@@ -12,6 +12,7 @@
 .header-btn {
   display: flex;
   align-items: center;
+  justify-content: center;
   color: azure;
   height: 100%;
 }
@@ -29,7 +30,7 @@
 }
 
 .header__left-btn {
-  max-width: 100px;
+  width: 90px;
   border-left: 2px black solid;
 
   :hover {
@@ -47,6 +48,9 @@
   height: 100%;
 }
 
+.left-bor {
+  border-left: 2px black solid;
+}
 
 .header__right-btn {
   max-width: 160px;
@@ -55,7 +59,6 @@
   flex-direction: row;
   justify-content: flex-end;
   margin-left: auto;
-  border-left: 2px black solid;
 
   :hover {
     background-color: rgba(150, 10, 92, 0.6);

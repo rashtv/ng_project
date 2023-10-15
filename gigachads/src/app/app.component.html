@@ -1,8 +1,11 @@
-<app-header
-  [search]="fetchData"
-  (dataEvent)="receiveDataFromChild($event)"
-></app-header>
+<div class="app">
+  <app-header
+    [search]="fetchData"
+    (dataEvent)="receiveDataFromChild($event)"
+  ></app-header>
 
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>
 
-<app-footer></app-footer>
+  <app-footer></app-footer>
+
+</div>

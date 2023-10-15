@@ -1,0 +1,12 @@
+<div class="basket">
+  <h2>Your basket:</h2>
+  <h1 *ngIf="!orderedProducts.length">HOLY GUACAMOLE NAH</h1>
+  <div class="basket__card" *ngFor="let order of orderedProducts">
+    <div class="basket__card-item">{{order.drink.strDrink}}: {{order.amount}}   THANK U MAN!
+      <app-btn><span (click)="removeOrder(order)" class="basket__card-rmbtn" btn>remove</span></app-btn>
+    </div>
+  </div>
+  <div *ngIf="orderedProducts.length" class="basket__card-btn">
+    <app-btn (click)="buyOrder()"><span btn>buy</span></app-btn>
+  </div>
+</div>

@@ -1,28 +1,51 @@
 .card {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 20px;
-    padding: 20px;
-    margin: 20px;
-    border: 2px solid gray;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px;
+  margin: 20px;
+  border: 2px solid rgb(128, 128, 128);
 }
 
 .card__left-img {
-    width: 120px;
+  width: 120px;
 }
 
 .card__info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
 }
 
-.card-btn{
-    color: white;
+.card__buy {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  gap: 0;
 }
 
-.card__atom-btn {
-    background-color: aqua;
+.card__buy-amount{
+  max-width: 50px;
+  border: 1px solid black;
+  border-radius: 6px;
+}
+
+.card-btn {
+  color: white;
+  padding: 10px;
+}
+
+.card__buy-btn {
+  background-color: rgba(167, 67, 255, 0.69);
+  margin-left: auto;
+  margin-top: auto;
+  border: 1px solid black;
+  border-radius: 8px;
+
+  :active {
+    background-color: rgba(135, 0, 255, 0.69);
+    border-radius: 8px;
+  }
 }

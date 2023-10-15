@@ -1,5 +1,6 @@
 export class Drink {
   'idDrink': string;
+  'amount': number = 0;
   'strDrink': string;
   'strDrinkAlternate': string;
   'strTags': string;

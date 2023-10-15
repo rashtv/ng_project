@@ -10,7 +10,7 @@ export class InputComponent {
   @Input() input_placeholder: string = "";
   @Output() dataEvent = new EventEmitter<string>();
 
-  
+
   text: string = "";
   handle() {
     this.dataEvent.emit(this.text);
