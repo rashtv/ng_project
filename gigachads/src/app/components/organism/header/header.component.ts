@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-header',
@@ -9,13 +10,17 @@ export class HeaderComponent {
 
   authorized: boolean = false;
 
-  constructor() { }
+  constructor(private r: Router) { }
 
   ngOnInit(): void {
   }
 
   auth() {
-    this.authorized = !this.authorized
+    this.authorized = true;
+  }
+  unauth() {
+    this.authorized = false;
+    this.r.navigate(['/catalogue']);
   }
 
   @Input() search: () => void = () => {};

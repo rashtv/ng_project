@@ -27,13 +27,13 @@
 
   <div class="header__right-btn" *ngIf="authorized">
     <div class="header__right-btn max-btn left-bor">
-      <app-btn class="header-btn">
-        <span btn class="header-btn" routerLink="/profile">Profile</span>
+      <app-btn class="header-btn" routerLink="/profile">
+        <span btn class="header-btn">Profile</span>
       </app-btn>
     </div>
 
     <div class="header__right-btn max-btn left-bor">
-      <app-btn class="header-btn" (click)="auth()">
+      <app-btn class="header-btn" (click)="unauth()">
         <span btn class="header-btn">Logout</span>
       </app-btn>
     </div>
