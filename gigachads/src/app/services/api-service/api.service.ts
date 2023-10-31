@@ -28,8 +28,8 @@ export class ApiService {
   sharedData = this.currentData.asObservable();
   constructor() {}
 
-  
-  
+
+
   getCurrentData() {
     return this.sharedData;
   }
@@ -52,8 +52,9 @@ export class ApiService {
   get_by_name(url: string) {
     return this.fetchData(this.APIs.name + url);
   }
-  get_by_id(url: string) {
-    return this.fetchData(this.APIs.id + url);
+  async get_by_id(url: string) {
+    const response = await axios.get(this.BaseUrl + this.APIs.id + url);
+    return response.data;
   }
   get_by_random(url: string) {
     return this.fetchData(this.APIs.random + url);

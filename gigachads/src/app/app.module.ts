@@ -17,6 +17,7 @@ import { AlcoCardComponent } from './components/molecule/alco-card/alco-card.com
 import { PageNotFoundComponent } from './pages/notFound/page-not-found/page-not-found.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { BasketComponent } from './components/organism/basket/basket.component';
+import { AlcoDetailComponent } from './pages/alco-detail/alco-detail.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { BasketComponent } from './components/organism/basket/basket.component';
     PageNotFoundComponent,
     ProfileComponent,
     BasketComponent,
+    AlcoDetailComponent,
   ],
   imports: [
     BrowserModule,
