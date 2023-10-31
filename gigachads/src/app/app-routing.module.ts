@@ -11,7 +11,7 @@ const routes: Routes = [
   {path: 'catalogue', component: CatalogueComponent},
   {path: 'about', component: AboutComponent},
   {path: 'profile', component: ProfileComponent },
-  {path: '', redirectTo: 'main', pathMatch: 'full' },
+  {path: '', redirectTo: 'catalogue', pathMatch: 'full' },
   {path: '**', component: PageNotFoundComponent },
 ];
 
