@@ -12,7 +12,6 @@ export class CatalogueComponent {
 
   cards: Drink[] = [];
   ngOnInit() {
-    // this.fetchCurData();
     this.dataObs()
   }
 
@@ -21,10 +20,4 @@ export class CatalogueComponent {
       this.cards = array;
     });
   }
-
-  // fetchCurData() {
-  //   setTimeout(() => {
-  //     this.cards = this.apiService.getCurrentData();
-  //   }, 300);
-  // }
 }
