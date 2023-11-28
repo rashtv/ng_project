@@ -13,25 +13,14 @@ export class AlcoDetailComponent {
   }
 
   curID: string = '';
-  curDrink: Drink | undefined;
+  curDrink: Drink | any = null;
 
   async getData() {
     this.curID = await this.route.snapshot.params['id'];
     const res = await this.api.get_by_id(this.curID);
     this.curDrink = res.drinks[0];
-    console.log(res.drinks[0]);
   }
-
-  // dataObs() {
-  //   this.api.sharedData.subscribe((array) => {
-  //     this.curDrink = array;
-  //   });
-  // }
   ngOnInit() {
     this.getData();
-    // this.dataObs();
-    // setInterval(() => {
-    //   console.log(this.curDrink)
-    // }, 1000);
   }
 }

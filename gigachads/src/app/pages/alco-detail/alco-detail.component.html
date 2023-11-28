@@ -1,5 +1,5 @@
-<div class="detail">
-  {{curDrink?.idDrink}}
-  {{curDrink?.strDrink}}
-  {{curDrink?.strGlass}}
+<div *ngIf="curDrink" class="detail">
+  {{curDrink.idDrink}}
+  {{curDrink.strDrink}}
+  {{curDrink.strGlass}}
 </div>

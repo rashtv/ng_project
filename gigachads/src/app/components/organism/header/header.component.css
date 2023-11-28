@@ -27,6 +27,11 @@
   justify-content: center;
   align-items: center;
   height: 80px;
+  flex: 1;
+  max-width: 500px;
+}
+
+.header__search-bar{
 }
 
 .header__left-btn {
