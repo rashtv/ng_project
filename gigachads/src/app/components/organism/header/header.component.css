@@ -8,7 +8,6 @@
   );
 }
 
-
 .header-btn {
   display: flex;
   align-items: center;
@@ -31,18 +30,9 @@
   max-width: 500px;
 }
 
-.header__search-bar{
-}
-
 .header__left-btn {
   width: 90px;
   border-left: 2px black solid;
-
-  :hover {
-    background-color: rgba(150, 10, 92, 0.6);
-    transition: 0.4s;
-    cursor: pointer;
-  }
 }
 
 .header__left-end {
@@ -64,10 +54,10 @@
   flex-direction: row;
   justify-content: flex-end;
   margin-left: auto;
+}
 
-  :hover {
-    background-color: rgba(150, 10, 92, 0.6);
-    transition: 0.4s;
-    cursor: pointer;
-  }
+.header__left-btn:hover, .header__right-btn:hover {
+  background-color: rgba(150, 10, 92, 0.6);
+  transition: 0.4s;
+  cursor: pointer;
 }
