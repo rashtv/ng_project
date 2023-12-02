@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Router } from "@angular/router";
+import { LoginService } from 'src/app/services/login/login.service';
 
 @Component({
   selector: 'app-header',
@@ -7,20 +8,27 @@ import { Router } from "@angular/router";
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  
+  constructor(private r: Router, private login: LoginService) {}
 
-  authorized: boolean = false;
+  isAuth: boolean = false;
 
-  constructor(private r: Router) { }
 
-  ngOnInit(): void {
+  checkAuth() {
+    this.isAuth = localStorage.getItem('auth') ? true : false; 
+
+    this.login.sharedAuth.subscribe((a) => {
+      this.isAuth = a;
+    });
   }
 
-  auth() {
-    this.authorized = true;
+  ngOnInit() {
+    this.checkAuth();
   }
+
   unauth() {
-    this.authorized = false;
-    this.r.navigate(['/catalogue']);
+    localStorage.removeItem('auth');
+    this.isAuth = false;
   }
 
   @Input() search: () => void = () => {};

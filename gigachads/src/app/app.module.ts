@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +19,8 @@ import { PageNotFoundComponent } from './pages/notFound/page-not-found/page-not-
 import { ProfileComponent } from './pages/profile/profile.component';
 import { BasketComponent } from './components/organism/basket/basket.component';
 import { AlcoDetailComponent } from './pages/alco-detail/alco-detail.component';
+import { LoginComponent } from './pages/login/login.component';
+import { RegisterComponent } from './pages/register/register.component';
 
 @NgModule({
   declarations: [
@@ -36,11 +39,14 @@ import { AlcoDetailComponent } from './pages/alco-detail/alco-detail.component';
     ProfileComponent,
     BasketComponent,
     AlcoDetailComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

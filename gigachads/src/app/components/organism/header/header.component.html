@@ -25,7 +25,7 @@
     <app-search class="header__search-bar"></app-search>
   </div>
 
-  <div class="header__right-btn" *ngIf="authorized">
+  <div class="header__right-btn" *ngIf="isAuth">
     <div class="header__right-btn max-btn left-bor">
       <app-btn class="header-btn" routerLink="/profile">
         <span btn class="header-btn">Profile</span>
@@ -39,9 +39,9 @@
     </div>
   </div>
 
-  <div class="header__right-btn left-bor" *ngIf="!authorized">
-    <app-btn class="header-btn" (click)="auth()">
-      <span btn class="header-btn">Login</span>
+  <div class="header__right-btn left-bor" *ngIf="!isAuth">
+    <app-btn class="header-btn">
+      <span btn class="header-btn" routerLink="login">Login</span>
     </app-btn>
   </div>
 
