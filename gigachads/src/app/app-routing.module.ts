@@ -8,11 +8,13 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { AlcoDetailComponent } from './pages/alco-detail/alco-detail.component'
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 const routes: Routes = [
   {path: 'main', component: MainComponent},
   {path: 'catalogue', component: CatalogueComponent},
   {path: 'about', component: AboutComponent},
+  {path: 'contact', component: ContactComponent },
   {path: 'profile', component: ProfileComponent },
   {path: 'login', component: LoginComponent },
   {path: 'register', component: RegisterComponent },

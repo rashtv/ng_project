@@ -11,7 +11,11 @@
 
 .footer__table-head,
 .footer__table-body{
-  padding: 6px 30px;
+  padding: 6px 120px;
+}
+
+.text-center {
+  text-align: center;
 }
 
 p{

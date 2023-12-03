@@ -21,6 +21,7 @@ import { BasketComponent } from './components/organism/basket/basket.component';
 import { AlcoDetailComponent } from './pages/alco-detail/alco-detail.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { RegisterComponent } from './pages/register/register.component';
     AlcoDetailComponent,
     LoginComponent,
     RegisterComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
