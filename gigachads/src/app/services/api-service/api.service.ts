@@ -28,8 +28,6 @@ export class ApiService {
   sharedData = this.currentData.asObservable();
   constructor() {}
 
-
-
   getCurrentData() {
     return this.sharedData;
   }
