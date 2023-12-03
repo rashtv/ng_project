@@ -2,6 +2,10 @@
   margin: 100px;
 }
 
+.basket-top {
+  max-width: min-content;
+}
+
 .basket__card {
   display: flex;
   flex-direction: column;
@@ -16,13 +20,6 @@
   padding: 4px;
   margin: 10px;
   max-width: 400px;
-}
-
-.basket__card-btn {
-  background-color: white;
-  max-width: max-content;
-  padding: 10px 30px;
-  border-radius: 20px 100px/200px;
 }
 
 .basket__card-rmbtn {

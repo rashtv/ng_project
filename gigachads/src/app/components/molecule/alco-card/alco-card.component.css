@@ -1,7 +1,8 @@
 .card {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: no-wrap;
   flex-direction: row;
+  align-items: center;
   gap: 20px;
   padding: 20px;
   margin: 20px;
@@ -22,14 +23,17 @@
 .card__buy {
   display: flex;
   flex-direction: column;
+  gap: 10px;
   margin-left: auto;
-  gap: 0;
 }
 
 .card__buy-amount{
-  max-width: 50px;
+  align-self: end;
+  max-width: 54px;
+  padding: 4px;
   border: 1px solid black;
   border-radius: 6px;
+  font-weight: 700;
 }
 
 .card-btn {
