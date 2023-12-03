@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import {BasketService} from "../../../services/basket/basket.service";
 import {Drink} from "../../../models/drink/drink";
 
@@ -6,6 +6,7 @@ import {Drink} from "../../../models/drink/drink";
 type OrderedProduct = {
   drink: Drink;
   amount: number;
+  retail_price: number;
 };
 
 @Component({
@@ -19,26 +20,18 @@ export class BasketComponent {
   }
 
   orderedProducts: OrderedProduct[] = []
-
+  
   ngOnInit() {
+    this.basket.loadUserBasket();
     this.getOrder();
   }
 
   getOrder() {
     this.orderedProducts = this.basket.get_from_basket();
-    console.log(this.orderedProducts);
-  }
-
-  buyOrder() {
-    if(this.orderedProducts.length) {
-      this.basket.clear_basket();
-      this.getOrder();
-    }
   }
 
   removeOrder(order: OrderedProduct) {
     this.basket.remove_from_basket(order);
     this.getOrder();
   }
-
 }

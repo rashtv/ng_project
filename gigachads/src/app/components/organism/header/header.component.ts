@@ -16,9 +16,9 @@ export class HeaderComponent {
 
   checkAuth() {
     this.isAuth = localStorage.getItem('auth') ? true : false; 
-
     this.login.sharedAuth.subscribe((a) => {
-      this.isAuth = a;
+      // this.isAuth = a;
+      this.isAuth = localStorage.getItem('auth') ? true : false; 
     });
   }
 
@@ -28,7 +28,9 @@ export class HeaderComponent {
 
   unauth() {
     localStorage.removeItem('auth');
+    localStorage.removeItem('currentUser');
     this.isAuth = false;
+    this.r.navigate(['/catalogue']);
   }
 
   @Input() search: () => void = () => {};

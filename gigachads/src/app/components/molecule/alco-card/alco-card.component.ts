@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Drink } from 'src/app/models/drink/drink';
 import {BasketService} from "../../../services/basket/basket.service";
-import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-alco-card',
@@ -25,11 +24,10 @@ export class AlcoCardComponent {
 
   amount: number = 1;
 
-
-
   buyDrink() {
     this.validator();
-    this.basket.add_to_basket(this.drink, this.amount);
+    let retail_price = ((this.drink.idDrink % 10) * 100 + this.drink.idDrink * 100) / 1000;
+    this.basket.add_to_basket(this.drink, this.amount, retail_price);
   }
 
 }

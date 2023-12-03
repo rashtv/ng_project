@@ -4,8 +4,9 @@
   background: linear-gradient(
     to right,
     rgba(65, 1, 121, 1),
-    rgba(65, 1, 121, 0.696)
+    rgba(65, 1, 121, 0.5)
   );
+  margin-bottom: 2px;
 }
 
 .header-btn {
