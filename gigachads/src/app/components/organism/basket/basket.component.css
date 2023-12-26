@@ -27,3 +27,7 @@
   max-width: max-content;
   padding: 2px;
 }
+
+.basket__card-info {
+  margin: 0;
+}

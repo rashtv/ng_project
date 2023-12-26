@@ -93,6 +93,10 @@ export class BasketService {
   }
 
   get_from_basket() {
-    return this.orderedProducts;
+    return (this.orderedProducts);
+  }
+
+  get_total_price() {
+    return this.totalPrice;
   }
 }

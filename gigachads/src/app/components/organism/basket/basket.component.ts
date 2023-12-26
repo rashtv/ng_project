@@ -20,7 +20,7 @@ export class BasketComponent {
   }
 
   orderedProducts: OrderedProduct[] = []
-  
+
   ngOnInit() {
     this.basket.loadUserBasket();
     this.getOrder();
