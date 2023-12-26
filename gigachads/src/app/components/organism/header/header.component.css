@@ -29,6 +29,7 @@
   height: 80px;
   flex: 1;
   max-width: 500px;
+  margin-left: 100px;
 }
 
 .header__left-btn {

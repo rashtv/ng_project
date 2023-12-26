@@ -8,17 +8,17 @@ import { LoginService } from 'src/app/services/login/login.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  
+
   constructor(private r: Router, private login: LoginService) {}
 
   isAuth: boolean = false;
 
 
   checkAuth() {
-    this.isAuth = localStorage.getItem('auth') ? true : false; 
+    this.isAuth = localStorage.getItem('auth') ? true : false;
     this.login.sharedAuth.subscribe((a) => {
       // this.isAuth = a;
-      this.isAuth = localStorage.getItem('auth') ? true : false; 
+      this.isAuth = localStorage.getItem('auth') ? true : false;
     });
   }
 

@@ -12,6 +12,7 @@ export class CatalogueComponent {
 
   cards: Drink[] = [];
   ngOnInit() {
+    this.fetchData();
     this.dataObs()
   }
 
@@ -19,5 +20,16 @@ export class CatalogueComponent {
     this.apiService.sharedData.subscribe((array) => {
       this.cards = array;
     });
+  }
+
+  fetchData = () => {
+    this.apiService.get_by_name("").subscribe(
+      (response) => {
+        this.cards = response.drinks;
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
   }
 }

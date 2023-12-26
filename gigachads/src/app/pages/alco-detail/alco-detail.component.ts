@@ -3,11 +3,13 @@ import {ActivatedRoute} from '@angular/router'
 import {Drink} from "../../models/drink/drink";
 import {ApiService} from 'src/app/services/api-service/api.service';
 
+
 @Component({
   selector: 'app-alco-detail',
   templateUrl: './alco-detail.component.html',
   styleUrls: ['./alco-detail.component.css']
 })
+
 export class AlcoDetailComponent {
   constructor(private route: ActivatedRoute, private api: ApiService) {
   }
@@ -15,12 +17,29 @@ export class AlcoDetailComponent {
   curID: string = '';
   curDrink: Drink | any = null;
 
-  async getData() {
-    this.curID = await this.route.snapshot.params['id'];
-    const res = await this.api.get_by_id(this.curID);
-    this.curDrink = res.drinks[0];
-  }
   ngOnInit() {
     this.getData();
+    this.dataObs();
   }
+
+  dataObs() {
+    this.api.sharedData.subscribe((array) => {
+      this.curDrink = array[0];
+    });
+  }
+
+  async getData() {
+    this.curID = this.route.snapshot.params['id'];
+    try {
+      this.api.get_by_id(this.curID).subscribe(
+        (response) => {
+          this.curDrink = response;
+          console.log(response);
+        }
+      );
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  }
+
 }
